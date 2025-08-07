@@ -26,7 +26,7 @@
           <ul class="nav nav-justified">
             <li><a href="#">Inicio</a></li>            
             <li><a href="#">Administración</a></li>                        
-            <li><a href="#">Acerca</a></li>            
+            <li><a href="{{ url_for('main.acerca') }}">Acerca</a></li>            
           </ul>
         </nav>
       </div>
@@ -61,7 +61,7 @@
           <p class="text-danger text-justify">{{ vacante.descripcion[:150] }}</p>
           <p class="text-justify">{{ vacante.detalle[:50] }}</p>
           <p class="text-justify">{{ vacante.fecha_publicacion }}</p>
-          <p><a class="btn btn-primary" href="/detalle/" role="button">Ver detalles &raquo;</a></p>
+          <p><a class="btn btn-primary" href="{{ url_for('main.detalle') }}" role="button">Ver detalles &raquo;</a></p>
         </div>
         {% else %}
         <div class="col-lg-12">
